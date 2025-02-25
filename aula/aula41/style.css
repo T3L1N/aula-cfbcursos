@@ -1,0 +1,65 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font: normal 16pt Arial;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.curso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    border: solid 3px #888;
+    border-radius: 10px;
+    margin: 5px 0px;
+
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    background-color: #025;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.selecionado {
+    background-color: #800;
+    color: #fcc !important;
+    border-color: #f00 !important;
+}
+
+.c1 {
+    background-color: #ccc;
+    color: #444;
+}
+
+.caixa {
+    border: solid 4px #000;
+    border-radius: 8px;
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+}
+
+.lixeira {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
