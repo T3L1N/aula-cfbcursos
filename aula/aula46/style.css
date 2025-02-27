@@ -5,6 +5,10 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-color: rgb(44, 44, 44);
+}
+
 main {
     font: normal 16pt Arial;
     color: white;
@@ -60,6 +64,7 @@ button {
     border: solid 4px #000;
     border-radius: 8px;
     background-color: #eee;
+    color: #000;
     padding: 10px;
     display: flex;
     flex-direction: column;
