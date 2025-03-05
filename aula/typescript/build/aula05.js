@@ -1,0 +1,12 @@
+"use strict";
+let teste;
+teste = 213;
+teste = "Teles";
+teste = true;
+let cursos = ['JavaScript', 'TypeScript', 'PHP', 213, true];
+let valores = [10, 23, 55];
+cursos.push('Arduino');
+valores.push(89);
+console.log(cursos);
+console.log(valores);
+console.log(teste);
