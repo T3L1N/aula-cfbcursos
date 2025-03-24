@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 63</title>
+</head>
+<body>
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label>Nome</label>
+            <input type="text" name="fnome" id="fnome" value="">
+        </div>
+        <div class="campoForm">
+            <label>Portas</label>
+            <input type="number" name="fportas" id="fportas" value="0">
+        </div>
+        <div class="campoForm">
+            <label>Blindagem</label>
+            <input type="number" name="fblindagem" id="fblindagem" disable value="0">
+        </div>
+        <div class="campoForm">
+            <label>Munição</label>
+            <input type="number" name="fmunicao" id="fmunicao" disable value="0">
+        </div>
+        <div class="campoForm">
+            <label>Tipo</label>
+            <div class="radio">
+                <input type="radio" name="ftipo" id="ftipoMilitar" value="m">Militar
+            </div>
+            <div class="radio">
+                <input type="radio" name="ftipo" id="ftipoNormal" value="n" checked>Normal
+            </div>
+        </div>
+        <div class="campoForm">
+            <button id="btnAddCarro">Adicionar</button>
+        </div>
+    </div>
+    <div class="carros">
+        <!-- <div class="carro">Golf</div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
