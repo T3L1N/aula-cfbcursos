@@ -1,12 +1,42 @@
-const ftipoMilitar = document.querySelector('#ftipoMilitar')
+const militar = document.querySelector('#ftipoMilitar')
 const normal = document.querySelector('#ftipoNormal')
+const blindagem = document.querySelector('#fblindagem')
+const municao = document.querySelector('#fmunicao')
+const carros = document.querySelector('.carros')
+const btnADDCarro = document.querySelector('#btnAddCarro')
+const fnome = document.querySelector('#fnome')
+const fportas = document.querySelector('#fportas')
+
+let veiculos = []
 
 ftipoMilitar.addEventListener('click', (evt) => {
-    console.log('teste')
+    blindagem.removeAttribute('disabled')
+    municao.removeAttribute('disabled')
 })
 
 ftipoNormal.addEventListener('click', (evt) => {
-    console.log('teste')
+    blindagem.value = 0
+    municao.value = 0
+    blindagem.setAttribute('disabled', 'disabled')
+    municao.setAttribute('disabled', 'disabled')
+})
+
+const gerenciarExibicaoCarros = () => {
+    carros.innerHTML = ''
+    veiculos.forEach((c) => {
+        const div = document.createElement('div')
+        div.setAttribute('class', 'carro')
+        div.innerHTML = c.nome
+        carros.appendChild(div)
+    })
+}
+
+btnADDCarro.addEventListener('click', () => {
+    if (normal.checked) {
+        const c = new Carro(fnome.value, fportas.value)
+        veiculos.push(c)
+    }
+    gerenciarExibicaoCarros()
 })
 
 class Carro { //Classe PAI / BASE
@@ -57,27 +87,3 @@ const c2 = new Militar('Lutador', 6, 100, 50)
 
 const c3 = new Utilitario('Prisma', 4, 5)
 c3.setCor('Preto')
-
-console.log(`Nome: ${c1.nome}`)
-console.log(`Portas: ${c1.portas}`)
-console.log(`Ligado: ${(c1.ligado)?'Sim' : 'Não'}`)
-console.log(`Velocidade: ${c1.vel}`)
-console.log(`Cor: ${c1.cor}`)
-console.log(`----------------`)
-
-console.log(`Nome: ${c2.nome}`)
-console.log(`Portas: ${c2.portas}`)
-console.log(`Ligado: ${(c2.ligado)?'Sim' : 'Não'}`)
-console.log(`Velocidade: ${c2.vel}`)
-console.log(`Blindagem: ${c2.blindagem}`)
-console.log(`Munição: ${c2.municao}`)
-console.log(`Cor: ${c2.cor}`)
-console.log(`----------------`)
-
-console.log(`Nome: ${c3.nome}`)
-console.log(`Portas: ${c3.portas}`)
-console.log(`Lugares: ${c3.lugares}`)
-console.log(`Ligado: ${(c3.ligado)?'Sim' : 'Não'}`)
-console.log(`Velocidade: ${c3.vel}`)
-console.log(`Cor: ${c3.cor}`)
-console.log(`----------------`)
